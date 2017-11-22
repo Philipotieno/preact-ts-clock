@@ -1,0 +1,32 @@
+{
+  "name": "preact-ts-clock",
+  "version": "1.0.0",
+  "description": "Example of a clock component in Preact with TypeScript typings.",
+  "main": "index.js",
+  "scripts": {
+    "build-bundle": "./node_modules/.bin/webpack --config webpack.config.js --display-error-details",
+    "build-bundle-watch": "./node_modules/.bin/webpack --config webpack.config.js --display-error-details --watch",
+
+    "build-bundle-minified": "PROD_ENV=1 ../node_modules/webpack/bin/webpack.js --config webpack.config.js --display-error-details",
+    "build-bundle-minified-watch": "PROD_ENV=1 webpack --config webpack.config.js --display-error-details --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shirakaba/preact-ts-clock.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shirakaba/preact-ts-clock/issues"
+  },
+  "homepage": "https://github.com/shirakaba/preact-ts-clock#readme",
+  "devDependencies": {
+    "ts-loader": "^3.1.1",
+    "typescript": "^2.6.1",
+    "watch": "^1.0.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "preact": "^8.2.6"
+  }
+}

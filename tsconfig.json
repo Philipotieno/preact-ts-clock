@@ -1,0 +1,32 @@
+{
+    "compilerOptions": {
+        "watch": true, // This watches for filesystem changes, recompiling upon save.
+        "sourceMap": true, // Can comment this out if Webpack is set to provide sourcemap.
+        "target": "es5", // the Javascript version to target.
+        "baseUrl": ".", // This makes all URLs relative to this config file's containing folder (rather than relative to each source file!)
+        "outDir": "dist", // Can comment this out if Webpack is outputting the .js files as a bundle anyway.
+        "moduleResolution": "node",
+
+        // Preact support
+        "jsx": "react",
+        "jsxFactory": "h", // Would become React.createElement() were we not to specify preact's h().
+        // Tsconfig defaults to including all .ts, .tsx, and .d.tsx (and .js, .jsx if allowJS=true), so no need to change 'include'.
+
+        "declaration": false,
+        "allowJs": false, // must be false if declaration is true.
+        "noImplicitAny": true,
+        "noImplicitThis": true,
+        "strictNullChecks": true,
+
+        /* This block adds support for ES6 Promises: http://stackoverflow.com/a/32410515/5951226 */
+        "module": "commonjs",
+        "noLib": false
+    },
+
+    // Prevents the compiler from watching any of these sources (directories or files)
+    "exclude": [
+      // "webpack.config.js",
+      "node_modules", // so as not to accidentally pull in any .ts(x) files from node_modules (eg. 'react-babel-karma-gulp-happypack').
+      "dist" // To prevent "Cannot write file ... as it would overwrite the file" error: https://github.com/Microsoft/TypeScript/issues/14538
+    ]
+}
